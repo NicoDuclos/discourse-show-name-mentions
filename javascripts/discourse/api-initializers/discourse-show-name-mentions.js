@@ -28,7 +28,7 @@ function updateCookedMentions(api) {
       : "a.mention";
     const otherMentionsSelector = "li.notification .item-label,.chat-message-thread-indicator__last-reply-username";
     
-    const mentions = element.querySelectorAll(selector + otherMentionsSelector);
+    const mentions = element.querySelectorAll(selector + " " + otherMentionsSelector);
 
     mentions.forEach((domElement) => {
       if (domElement.dataset.originalMention) {
