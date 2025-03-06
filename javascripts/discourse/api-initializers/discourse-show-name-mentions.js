@@ -26,7 +26,9 @@ function updateCookedMentions(api) {
     const selector = settings.show_fullname_for_groups
       ? "a.mention,a.mention-group"
       : "a.mention";
-    const mentions = element.querySelectorAll(selector);
+    const otherMentionsSelector = "li.notification .item-label,.chat-message-thread-indicator__last-reply-username";
+    
+    const mentions = element.querySelectorAll(selector + otherMentionsSelector);
 
     mentions.forEach((domElement) => {
       if (domElement.dataset.originalMention) {
